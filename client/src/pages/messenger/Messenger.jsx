@@ -1,7 +1,7 @@
 import React from 'react'
 import Topbar from "../../components/topbar/Topbar"
 import Conversation from '../../components/conversation/Conversation';
-import Message from '../message/Message';
+import Message from '../../components/message/Message';
 import ChatOnline from '../../components/chatOnline/ChatOnline';
 
 const Messenger = () => {
