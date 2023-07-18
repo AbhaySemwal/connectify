@@ -2,6 +2,7 @@ import React, { useContext, useRef } from 'react'
 import { LoginCall } from '../../apiCalls';
 import { AuthContext } from '../../context/AuthContext';
 import {CircularProgress} from "@material-ui/core";
+import { Link } from 'react-router-dom';
 
 const Login = () => {
     const email=useRef();
@@ -24,7 +25,7 @@ const Login = () => {
                     <input className="h-[50px] rounded-lg border-[1px] border-solid border-gray-400 outline-none text-lg pl-5" type='password' required ref={password} minLength={6} placeholder='Password'></input>
                     <button disabled={isFetching} className='disabled:cursor-not-allowed h-[50px] rounded-lg border-none flex items-center justify-center bg-blue-600 text-white text-lg'>{isFetching?<CircularProgress color="inherit" size={25}/>:"Log In"}</button>
                     <span className='text-center text-blue-600'>Forgot Password?</span>
-                    <button disabled={isFetching} className='disabled:cursor-not-allowed h-[50px] w-[60%] self-center rounded-lg border-none flex items-center justify-center bg-[#26ad01] text-white text-lg'>{isFetching?<CircularProgress color="inherit" size={25}/>:"Create a New Account"}</button>
+                    <Link to="/register" disabled={isFetching} className='h-[50px] w-[60%] disabled:cursor-not-allowed self-center rounded-lg border-none flex items-center justify-center bg-[#26ad01] text-white text-lg'><button>{isFetching?<CircularProgress color="inherit" size={25}/>:"Create a New Account"}</button></Link>
                 </form>
             </div>
         </div>
