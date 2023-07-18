@@ -27,10 +27,10 @@ const Topbar = () => {
                     <Person/>
                     <span className='absolute -right-1.5 bottom-2.5 bg-red-700 rounded-full px-1 text-xs'>1</span>
                 </div>  
-                <div className='relative mr-5'>
+                <Link className='relative mr-5' to="/messenger">
                     <Chat/>
                     <span className='absolute -right-2 bottom-2.5 bg-red-700 rounded-full px-1 text-xs'>1</span>
-                </div>  
+                </Link>  
                 <div className='relative mr-5'>
                     <Notifications/>
                     <span className='absolute -right-1.5 bottom-2.5 bg-red-700 rounded-full px-1 text-xs'>1</span>
